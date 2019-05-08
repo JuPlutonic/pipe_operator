@@ -314,7 +314,7 @@ All other objects in this proof of concept are related to **method interception*
 
 ## Bugs
 
-This test case doesn't work yet - seems like the [object is not proxied](https://github.com/lendinghome/pipe_operator/blob/master/lib/pipe_operator/pipe.rb#L39) for some reason:
+This test case doesn't work yet - seems like the [object is not proxied](https://github.com/lendinghome/pipe_operator/blob/master/lib/pipe_operator/pipe.rb#L39) for some reason, test with #allocate #tap:
 
 ```ruby
 class Markdown
@@ -350,7 +350,7 @@ end
         * `class`
         * `kind_of?`
     * The following methods are reserved on `PipeOperator::Pipe` objects:
-        * `!`
+        * `!` It is same as `;`? Does it still work `0xFF00 | 0x00FF == 0xFFFF`(bitwise OR operator)?
         * `!=`
         * `==`
         * `__call__`
